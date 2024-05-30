@@ -4,22 +4,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Banner } from "./component/Banner";
 import { Projects } from "./component/Projects";
 import About from "./component/About";
-import Qualification from "./component/Qualification";
 import Contact from "./component/Contact";
-import AboutSection from "./component/demoAbout";
+import Net from "./component/Net";
+import Education from "./component/Education";
 function App() {
   return (
-    <>
+    
     <div className="App">
       <NavBar />
-      {/* <AboutSection/> */}
       <Banner />
+      
+      {/* <Net>
+
       <Projects/>
       <About/>
-      <Qualification/>
-      <Contact/>
+<Contact/>
+      </Net> */}
+
+      
+     <Net><Education/></Net>
+     <Net><Projects/></Net>
+      <Net><Contact/></Net>
+      <Net> <About/></Net>
       </div>
-    </>
+    
   )
 }
 

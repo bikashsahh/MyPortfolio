@@ -25,8 +25,13 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.18",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.6",
+    "@types/three": "^0.164.1",
     "animate.css": "^4.1.1",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.2.6",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
@@ -36,6 +41,10 @@
     "react-on-screen": "^2.1.1",
     "react-router-hash-link": "^2.4.3",
     "react-toastify": "^10.0.5",
-    "toaster": "^0.1.2"
+    "react-vertical-timeline-component": "^3.6.0",
+    "styled-components": "^6.1.11",
+    "three": "^0.164.1",
+    "toaster": "^0.1.2",
+    "vanta": "^0.5.24"
   }
 }

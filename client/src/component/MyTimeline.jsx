@@ -15,14 +15,17 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TrackVisibility from "react-on-screen";
 import { motion } from "framer-motion";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import SchoolIcon from '@mui/icons-material/School';
+import HorizontalRule from "@mui/icons-material/HorizontalRule";
+import { SymmetryHorizontal } from "react-bootstrap-icons";
 
-const Qualification = () => {
+const MyTimeline = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box sx={{ padding: 20 ,backgroundColor:'black'}} id="education" >
-      <TrackVisibility>
+    <Box sx={{ padding: 0 }}>
+      {/* <TrackVisibility>
         {({ isVisible }) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -30,46 +33,48 @@ const Qualification = () => {
             transition={{ duration: 0.5 }}
           >
             <Typography gutterBottom align="center" sx={{ fontSize: isMobile ? '32px' : '45px' }}>
-              Qualification
-              <Typography variant="subtitle1" gutterBottom align="center" sx={{ color: '#8a8787', p: '-5px' }}>
+              MyTimeline
+              <Typography variant="subtitle1" gutterBottom align="center" sx={{ color: '#8a8787' }}>
                 My Personal Journey
               </Typography>
             </Typography>
           </motion.div>
         )}
-      </TrackVisibility>
-      <Divider sx={{ mb: 4 }} />
+      </TrackVisibility> */}
+      {/* <Divider sx={{ mb: 4 }} /> */}
       <Timeline position="alternate">
         <TrackVisibility>
           {({ isVisible }) => (
             <TimelineItem>
-              <TimelineOppositeContent color="primary">
+              <TimelineOppositeContent>
                 <Typography variant="body2" color="#6D6B6D">
                   2022 – 2025
                 </Typography>
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot variant="outlined" color="success" />
-                <TimelineConnector />
+                <TimelineDot style={{ backgroundColor: "rgb(237, 31, 203)", color: "#fff" ,margin:'2px'}}>
+                  <SchoolIcon fontSize="large"/>
+                </TimelineDot>
+                <TimelineConnector style={{ backgroundColor: "rgb(237, 31, 203)" }} />
               </TimelineSeparator>
-              <TimelineContent>
+              <TimelineContent >
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
-                  animate={
-                    isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
-                  }
+                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Typography variant="h6" 
-                  
-                  >
+                  <Typography variant="h6" style={{ color: "#fff" }}>
                     Master of Computer Application
                   </Typography>
-                  <Typography variant="body1" color="#6D6B6D">
+                  <Typography variant="body1" style={{ color: "#fff" }}>
                     Motilal Nehru National Institute of Technology Allahabad
                     Prayagraj, Uttar Pradesh, India
                   </Typography>
                 </motion.div>
+                {/* <HorizontalRule sx={{width:'100px'}}></HorizontalRule> */}
+                <Divider sx={{ width: '100px', mx: 'auto', my: 2 ,color:'white'}}/>
+                 {/* <Divider sx={{ width: '100%', mx: 'auto', my: 3, borderColor: 'white' }} /> */}
+                {/* <SymmetryHorizontal/> */}
               </TimelineContent>
             </TimelineItem>
           )}
@@ -77,13 +82,11 @@ const Qualification = () => {
 
         <TrackVisibility>
           {({ isVisible }) => (
-            <TimelineItem sx={{ mt: "30px" }}>
+            <TimelineItem sx={{ mt: "0px" }}>
               <TimelineOppositeContent>
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
-                  animate={
-                    isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
-                  }
+                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Typography variant="h6">
@@ -92,17 +95,20 @@ const Qualification = () => {
                   <Typography variant="body1" color="#6D6B6D">
                     Calcutta University Kolkata, West Bengal, India
                   </Typography>
+                  <Divider sx={{ width: '100px', mx: 'auto', my: 3 ,color:'white'}}/>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot variant="outlined" color="success" />
-                <TimelineConnector />
+              <TimelineDot style={{ backgroundColor: "rgb(237, 31, 203)", color: "#fff" ,margin:'2px'}}>
+                  <SchoolIcon fontSize="large"/>
+                </TimelineDot>
+                <TimelineConnector style={{ backgroundColor: "rgb(237, 31, 203)" }} />
               </TimelineSeparator>
-              <TimelineContent color="primary">
+              <TimelineContent>
                 <Typography variant="body2" color="#6D6B6D">
                   2018 – 2021
                 </Typography>
-                <TimelineConnector />
+
               </TimelineContent>
             </TimelineItem>
           )}
@@ -110,26 +116,29 @@ const Qualification = () => {
 
         <TrackVisibility>
           {({ isVisible }) => (
-            <TimelineItem sx={{ mt: "30px" }}>
+            <TimelineItem sx={{ mt: "0px" }}>
               <TimelineOppositeContent color="#6D6B6D">
                 <Typography variant="body2">2016 – 2018</Typography>
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot variant="outlined" color="success" />
+              <TimelineDot style={{ backgroundColor: "rgb(237, 31, 203)", color: "#fff" ,margin:'2px'}}>
+                  <SchoolIcon fontSize="large"/>
+                </TimelineDot>
+                {/* <TimelineConnector style={{ backgroundColor: "rgb(237, 31, 203)" }} /> */}
               </TimelineSeparator>
               <TimelineContent>
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
-                  animate={
-                    isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
-                  }
+                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Typography variant="h6">Secondary School</Typography>
                   <Typography variant="body1" color="#6D6B6D">
-                    Pranab Vidyapith Higher Secondary School Dimapur, Nagaland,India
+                    Pranab Vidyapith Higher Secondary School Dimapur, Nagaland, India
                   </Typography>
                 </motion.div>
+              {/* <Divider sx={{ width: '100px', mx: 'auto', my: 3 ,color:'white'}}/> */}
+
               </TimelineContent>
             </TimelineItem>
           )}
@@ -139,4 +148,4 @@ const Qualification = () => {
   );
 };
 
-export default Qualification;
+export default MyTimeline;

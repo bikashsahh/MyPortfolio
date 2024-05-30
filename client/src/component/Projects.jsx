@@ -44,7 +44,7 @@ export const Projects = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box className="project" sx={{ backgroundColor: "black" }} id="projects">
+    <Box className="project" sx={{  }} id="projects">
       <TrackVisibility>
         {({ isVisible }) => (
           <Typography
@@ -56,7 +56,7 @@ export const Projects = () => {
           </Typography>
         )}
       </TrackVisibility>
-      <Box sx={{ p: "30px" }}>
+      <Box sx={{ p: "10px" }}>
         {projectData.map((project, index) => (
           <Box
             key={index}
