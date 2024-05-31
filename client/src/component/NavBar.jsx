@@ -36,19 +36,21 @@ export const NavBar = () => {
     setNavbarColor(isNavCollapsed ? "bg-black" : "");
   };
   function openEmail() {
-  // Email address
-  const emailAddress = 'bikashsah0312@gmail.com';
-  
-  // Subject and body of the email
-  const subject = 'Let\'s Connect!';
-  const body = 'Hi there,\n\nLet\'s connect!\n\nRegards,\n[Your Name]';
+    // Email address
+    const emailAddress = "bikashsah0312@gmail.com";
 
-  // Construct the mailto URL
-  const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Subject and body of the email
+    const subject = "Let's Connect!";
+    const body = "Hi there,\n\nLet's connect!\n\nRegards,\n[Your Name]";
 
-  // Open the default email client with the mailto URL
-  window.open(mailtoUrl);
-}
+    // Construct the mailto URL
+    const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Open the default email client with the mailto URL
+    window.open(mailtoUrl);
+  }
 
   return (
     <Router>
@@ -147,12 +149,14 @@ export const NavBar = () => {
                 <a href="#">
                   <img src={navIcon3} alt="" />
                 </a>
+
+                
               </div>
               <HashLink to="#connect">
-  <button className="vvc" onClick={() => openEmail()}>
-    <span>Let's Connect</span>
-  </button>
-</HashLink>
+                <button className="vvc" onClick={() => openEmail()}>
+                  <span>Let's Connect</span>
+                </button>
+              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>

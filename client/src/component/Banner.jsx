@@ -167,7 +167,7 @@ export const Banner = () => {
                     <b>blockchain development</b> for cutting-edge projects."
                   </Description>
                   <button>
-                    <Typography sx={{ color: "#DA4EA2" }}>
+                    <Typography sx={{ color: "#DA4EA2" }} onClick={() => openEmail()}>
                       Let’s Connect
                     </Typography>
                     <ArrowRightCircle size={25} />

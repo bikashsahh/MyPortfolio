@@ -123,7 +123,6 @@ const Education = () => {
             <Title>Achieving Milestones, Building Futures</Title>
             <Qualification>
             <HorizontalRuleIcon fontSize="large" />
-              {/* <Line src="../assets/img/line.png"></Line> */}
               <Subtitle>Qualifications</Subtitle>
             </Qualification>
             <Description>

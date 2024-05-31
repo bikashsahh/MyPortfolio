@@ -25,23 +25,6 @@ const MyTimeline = () => {
 
   return (
     <Box sx={{ padding: 0 }}>
-      {/* <TrackVisibility>
-        {({ isVisible }) => (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Typography gutterBottom align="center" sx={{ fontSize: isMobile ? '32px' : '45px' }}>
-              MyTimeline
-              <Typography variant="subtitle1" gutterBottom align="center" sx={{ color: '#8a8787' }}>
-                My Personal Journey
-              </Typography>
-            </Typography>
-          </motion.div>
-        )}
-      </TrackVisibility> */}
-      {/* <Divider sx={{ mb: 4 }} /> */}
       <Timeline position="alternate">
         <TrackVisibility>
           {({ isVisible }) => (

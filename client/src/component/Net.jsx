@@ -2,9 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import NET from "vanta/dist/vanta.net.min";
 
-
-
-
 const Box = styled.div`
   width: 100%;
   height: 100vh; // Ensuring it covers the full viewport height
@@ -27,31 +24,18 @@ const Net = ({ children }) => {
       setVantaEffect(
         NET({
           el: myRef.current,
-        //   mouseControls: true,
-        //   touchControls: true,
-        //   gyroControls: false,
-        //   minHeight: 200.00,
-        //   minWidth: 200.00,
-        //   scale: 1.00,
-        //   scaleMobile: 1.00,
-        //   color: 0xcbef5,
-        //   backgroundColor: 0x121114,
-        //   points: 7.00,
-        //   maxDistance: 30.00,
-        //   spacing: 16.00
-        // el: "#your-element-selector",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x460746,
-  backgroundColor: 0x121114,
-  points: 11.00,
-  maxDistance: 31.00,
-  spacing: 16.00
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x460746,
+          backgroundColor: 0x121114,
+          points: 11.0,
+          maxDistance: 31.0,
+          spacing: 16.0,
         })
       );
     }
