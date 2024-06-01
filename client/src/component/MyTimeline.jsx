@@ -49,7 +49,7 @@ const MyTimeline = () => {
                   <Typography variant="h6" style={{ color: "#fff" }}>
                     Master of Computer Application
                   </Typography>
-                  <Typography variant="body1" style={{ color: "#fff" }}>
+                  <Typography variant="body1" style={{ color: "#6D6B6D" }}>
                     Motilal Nehru National Institute of Technology Allahabad
                     Prayagraj, Uttar Pradesh, India
                   </Typography>

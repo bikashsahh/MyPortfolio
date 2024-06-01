@@ -1,18 +1,122 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Box } from "@mui/material"; // Import Box from @mui/material
-import mypic from "../assets/img/personal-logo.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import styled from "styled-components";
+import { Box } from "@mui/material";
+import mypic from "../assets/img/newlogo.png";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: ${({ scrolled, isNavCollapsed }) =>
+    scrolled || isNavCollapsed ? "#000" : "transparent"};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+`;
+
+const Logo = styled(Box)`
+  margin-right: 20px;
+  width: auto;
+  height: 50px;
+  background-color: transparent;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 2px;
+  }
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: ${({ isNavCollapsed }) => (isNavCollapsed ? "none" : "flex")};
+  }
+`;
+
+const NavLink = styled(HashLink)`
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active {
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 3px 0;
+  }
+`;
+
+const SocialAndConnect = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 10px;
+    display: ${({ isNavCollapsed }) => (isNavCollapsed ? "none" : "flex")};
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const SocialIcon = styled.a`
+  margin-left: 10px;
+`;
+
+const ConnectButton = styled.button`
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #da4ea2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const ToggleButton = styled.button`
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+`;
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-  const [navbarColor, setNavbarColor] = useState("");
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,136 +135,90 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
-  const handleNavCollapse = () => {
+  const toggleNav = () => {
     setIsNavCollapsed(!isNavCollapsed);
-    setNavbarColor(isNavCollapsed ? "bg-black" : "");
   };
-  function openEmail() {
-    // Email address
-    const emailAddress = "bikashsah0312@gmail.com";
 
-    // Subject and body of the email
+  function openEmail() {
+    const emailAddress = "bikashsah0312@gmail.com";
     const subject = "Let's Connect!";
     const body = "Hi there,\n\nLet's connect!\n\nRegards,\n[Your Name]";
-
-    // Construct the mailto URL
     const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
-
-    // Open the default email client with the mailto URL
     window.open(mailtoUrl);
   }
 
   return (
     <Router>
-      <Navbar
-        expand="md"
-        className={`${scrolled ? "scrolled" : ""} ${navbarColor}`}
-      >
-        <Container>
-          <Navbar.Brand href="/">
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "transparent",
-              }}
-            >
-              <Box
-                component="img"
-                alt="mypic"
-                src={mypic}
-                sx={{
-                  marginRight: 2,
-                  width: 100,
-                  height: 40,
-                  backgroundColor: "transparent",
-                }}
-              />
-            </Box>
-          </Navbar.Brand>
-          <Navbar.Toggle className="navbar-toggler" onClick={handleNavCollapse}>
-            <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link
-                href="#home"
-                className={
-                  activeLink === "home" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("home")}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                href="#about"
-                className={
-                  activeLink === "about" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("about")}
-              >
-                About
-              </Nav.Link>
-              <Nav.Link
-                href="#education"
-                className={
-                  activeLink === "education"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("education")}
-              >
-                Qualification
-              </Nav.Link>
-              <Nav.Link
-                href="#projects"
-                className={
-                  activeLink === "projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("projects")}
-              >
-                Projects
-              </Nav.Link>
-              <Nav.Link
-                href="#contact"
-                className={
-                  activeLink === "contact"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("contact")}
-              >
-                Contact
-              </Nav.Link>
-            </Nav>
-            <span className="navbar-text">
-              <div className="social-icon">
-                <a href="#">
-                  <img src={navIcon1} alt="" />
-                </a>
-                <a href="#">
-                  <img src={navIcon2} alt="" />
-                </a>
-                <a href="#">
-                  <img src={navIcon3} alt="" />
-                </a>
-
-                
-              </div>
-              <HashLink to="#connect">
-                <button className="vvc" onClick={() => openEmail()}>
-                  <span>Let's Connect</span>
-                </button>
-              </HashLink>
-            </span>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Nav scrolled={scrolled} isNavCollapsed={isNavCollapsed}>
+        <Logo
+          component="img"
+          alt="mypic"
+          src={mypic}
+        />
+        <ToggleButton onClick={toggleNav}>
+          {isNavCollapsed ? "☰" : "×"}
+        </ToggleButton>
+        <NavLinks isNavCollapsed={isNavCollapsed}>
+          <NavLink
+            smooth
+            to="#home"
+            className={activeLink === "home" ? "active" : ""}
+            onClick={() => onUpdateActiveLink("home")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            smooth
+            to="#about"
+            className={activeLink === "about" ? "active" : ""}
+            onClick={() => onUpdateActiveLink("about")}
+          >
+            About
+          </NavLink>
+          <NavLink
+            smooth
+            to="#education"
+            className={activeLink === "education" ? "active" : ""}
+            onClick={() => onUpdateActiveLink("education")}
+          >
+            Qualification
+          </NavLink>
+          <NavLink
+            smooth
+            to="#projects"
+            className={activeLink === "projects" ? "active" : ""}
+            onClick={() => onUpdateActiveLink("projects")}
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            smooth
+            to="#contact"
+            className={activeLink === "contact" ? "active" : ""}
+            onClick={() => onUpdateActiveLink("contact")}
+          >
+            Contact
+          </NavLink>
+        </NavLinks>
+        <SocialAndConnect isNavCollapsed={isNavCollapsed}>
+          <SocialIcons>
+            <SocialIcon href="https://www.linkedin.com/in/thebikashsah/">
+              <LinkedInIcon sx={{color:'white'}}/>
+            </SocialIcon>
+            <SocialIcon href="https://github.com/bikashsahh">
+              <GitHubIcon sx={{color:'white'}}/>
+            </SocialIcon>
+            <SocialIcon href="https://www.instagram.com/bikashsahh/">
+              <InstagramIcon sx={{color:'white'}}/>
+            </SocialIcon>
+          </SocialIcons>
+          <ConnectButton onClick={() => openEmail()}>
+            Let's Connect 
+          </ConnectButton>
+        </SocialAndConnect>
+      </Nav>
     </Router>
   );
 };
