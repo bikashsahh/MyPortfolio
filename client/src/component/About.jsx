@@ -116,6 +116,7 @@ const About = () => {
                 <directionalLight position={[4, 1, 1]} />
                 <Square position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} />
                 <Square position={[1.5, 0, 0]} color="#da4ea2" isAnimating={!isMobile} />
+                <Square position={[0, 1, -1]} color="#D0E512"  isAnimating={!isMobile}/>
               </Suspense>
             </Canvas>
           </Left>
@@ -127,8 +128,9 @@ const About = () => {
               <OrbitControls enableZoom={false} />
                 <ambientLight intensity={1} />
                 <directionalLight position={[4, 1, 1]} />
-                <Square position={[-0.5, 1, 0]} color="#2596be"  isAnimating={isMobile}/>
-                <Square position={[0.5, -.1, 0]} color="#da4ea2"  isAnimating={isMobile}/>
+                <Square position={[-0.5, 1, 1]} color="#2596be"  isAnimating={isMobile}/>
+                <Square position={[0.5, -.1, .5]} color="#da4ea2"  isAnimating={isMobile}/>
+                <Square position={[1, 2, -.7]} color="#D0E512"  isAnimating={isMobile}/>
               </Suspense>
             </Canvas>
           </BackgroundCanvas>
