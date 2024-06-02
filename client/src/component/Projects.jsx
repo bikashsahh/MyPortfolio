@@ -160,9 +160,7 @@ const Projects = () => {
           </Qualification>
           <Box sx={{ width: "100%" }}>
             {projectData.map((project, index) =>
-              isMobile ? (
-                renderProjectCard(project, index)
-              ) : (
+                (
                 <TrackVisibility key={index}>
                   {({ isVisible }) => renderProjectCard(project, index, isVisible)}
                 </TrackVisibility>
