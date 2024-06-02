@@ -378,7 +378,7 @@ const Contact = () => {
             </TrackVisibility>
           )}
           {isMobile && (
-            <Box sx={{ mt:'70%'}}>
+            // <Box sx={{ mt:'70%'}}>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -409,7 +409,7 @@ const Contact = () => {
                 </Box>
               </Typography>
             </motion.div>
-            </Box>
+            // </Box>
           )}
         </Grid>
         <Grid item xs={12} md={6}>
@@ -429,7 +429,7 @@ const Contact = () => {
                     sx={{ fontSize: { xs: "20px", md: "25px" }, color: "white" }}
                     align={"center"}
                   >
-                    {/* Send us a message 🚀. */}
+                    Send us a message 🚀.
                   </Typography>
                   <form onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
@@ -550,7 +550,7 @@ const Contact = () => {
                     sx={{ fontSize: { xs: "20px", md: "25px" } }}
                     align={"center"}
                   >
-                    {/* Send us a message 🚀. */}
+                    Send us a message 🚀.
                   </Typography>
                   <form onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
