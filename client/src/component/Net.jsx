@@ -3,8 +3,9 @@ import styled from "styled-components";
 import NET from "vanta/dist/vanta.net.min";
 
 const Box = styled.div`
+  // z-index: -1;
   width: 100%;
-  height: 100vh; // Ensuring it covers the full viewport height
+  height: 100%; // Ensuring it covers the full viewport height
   display: flex;
   justify-content: center;
   align-items: center;

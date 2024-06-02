@@ -18,7 +18,7 @@ function App() {
       <About/>
       <Projects/>
       <Education/>
-      <Contact/> 
+      <Net><Contact/></Net> 
       {/* <Banner /> */}
       {/* <Net>
       </Net>
