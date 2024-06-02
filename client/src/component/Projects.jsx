@@ -330,7 +330,7 @@ const Projects = () => {
               component={motion.div}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.2}}
               sx={{
                 backgroundColor: "rgba(32, 8, 21, 0.8)",
                 color: "white",
