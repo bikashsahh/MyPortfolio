@@ -13,7 +13,7 @@ const Nav = styled.nav`
   align-items: center;
   padding: 10px 20px;
   background-color: ${({ scrolled, isNavCollapsed }) =>
-    scrolled || isNavCollapsed ? "#000" : "transparent"};
+    scrolled || isNavCollapsed ? "transparent" : "transparent"};
   position: fixed;
   top: 0;
   left: 0;

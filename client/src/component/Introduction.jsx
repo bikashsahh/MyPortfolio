@@ -7,8 +7,8 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import TrackVisibility from "react-on-screen";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import cvFile from "../assets/file/cv.pdf";
 
 const Introduction = () => {
@@ -19,10 +19,14 @@ const Introduction = () => {
     window.open(cvFile, "_blank");
   };
 
-  const renderContent = (isVisible) => (
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Percentage of the element visibility required to trigger the animation
+  });
+
+  const renderContent = () => (
     <motion.div
       initial={{ opacity: 0, x: 50 }}
-      animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+      animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
       transition={{ duration: 0.5 }}
     >
       <Box
@@ -30,7 +34,7 @@ const Introduction = () => {
         flexDirection={isMobile ? "column" : "row"}
         alignItems={isMobile ? "center" : "flex-start"}
         justifyContent="flex-start"
-        sx={{ mt: "10px" ,mb: "10px"}}
+        sx={{ mt: "10px", mb: "10px" }}
       >
         <Box sx={{ mr: 2, mb: isMobile ? 1 : 0, textAlign: isMobile ? "center" : "left" }} className="abouttag">
           <Typography variant="h6" color="text.secondary">
@@ -85,14 +89,8 @@ const Introduction = () => {
   );
 
   return (
-    <Grid>
-      {isMobile ? (
-        renderContent(true) // Always visible on mobile, no TrackVisibility
-      ) : (
-        <TrackVisibility>
-          {({ isVisible }) => renderContent(isVisible)}
-        </TrackVisibility>
-      )}
+    <Grid ref={ref}>
+      {renderContent()}
     </Grid>
   );
 };
