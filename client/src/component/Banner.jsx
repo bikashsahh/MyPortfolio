@@ -158,7 +158,7 @@ export const Banner = () => {
   }
 
   return (
-    <Section id="home" >
+    <Section id="home">
       <Container>
         <Left>
           <Title>Dream. Build. Achieve.</Title>

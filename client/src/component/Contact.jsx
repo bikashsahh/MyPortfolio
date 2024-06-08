@@ -158,13 +158,29 @@ const Contact = () => {
                         variant="filled"
                         fullWidth
                         label="Full Name"
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiFilledInput-root": {
+                            color: "#000",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            backgroundColor: "#f4f4f4",
+                            borderTopLeftRadius: "7px",
+                            borderTopRightRadius: "7px",
+                          },
+                          // Class for the label of the filled input field
+                          "& .MuiInputLabel-filled": {
+                            color: "black",
+                            // fontWeight: "bold",
+                          },
+                        }}
                         color="secondary"
-                        InputLabelProps={{
-                          style: { color: "white" },
-                        }}
-                        InputProps={{
-                          style: { color: "white" },
-                        }}
+                        // InputLabelProps={{
+                        //   style: { color: "white" },
+                        // }}
+                        // InputProps={{
+                        //   style: { color: "white" },
+                        // }}
                         required
                         name="fullName"
                       />
@@ -176,13 +192,30 @@ const Contact = () => {
                         label="Email address"
                         type="email"
                         required
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiFilledInput-root": {
+                            color: "#000",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            backgroundColor: "#f4f4f4",
+                            borderTopLeftRadius: "7px",
+                            borderTopRightRadius: "7px",
+                          },
+                          // Class for the label of the filled input field
+                          "& .MuiInputLabel-filled": {
+                            color: "black",
+                            // fontWeight: "bold",
+                          },
+                        }}
                         color="secondary"
-                        InputLabelProps={{
-                          style: { color: "white" },
-                        }}
-                        InputProps={{
-                          style: { color: "white" },
-                        }}
+                        // color="secondary"
+                        // InputLabelProps={{
+                        //   style: { color: "white" },
+                        // }}
+                        // InputProps={{
+                        //   style: { color: "white" },
+                        // }}
                         name="email"
                       />
                     </Grid>
@@ -191,13 +224,30 @@ const Contact = () => {
                         variant="filled"
                         fullWidth
                         label="Subject"
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiFilledInput-root": {
+                            color: "#000",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            backgroundColor: "#f4f4f4",
+                            borderTopLeftRadius: "7px",
+                            borderTopRightRadius: "7px",
+                          },
+                          // Class for the label of the filled input field
+                          "& .MuiInputLabel-filled": {
+                            color: "black",
+                            // fontWeight: "bold",
+                          },
+                        }}
                         color="secondary"
-                        InputLabelProps={{
-                          style: { color: "white" },
-                        }}
-                        InputProps={{
-                          style: { color: "white" },
-                        }}
+                        // color="secondary"
+                        // InputLabelProps={{
+                        //   style: { color: "white" },
+                        // }}
+                        // InputProps={{
+                        //   style: { color: "white" },
+                        // }}
                         name="subject"
                       />
                     </Grid>
@@ -209,13 +259,30 @@ const Contact = () => {
                         multiline
                         rows={4}
                         required
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiFilledInput-root": {
+                            color: "#000",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            backgroundColor: "#f4f4f4",
+                            borderTopLeftRadius: "7px",
+                            borderTopRightRadius: "7px",
+                          },
+                          // Class for the label of the filled input field
+                          "& .MuiInputLabel-filled": {
+                            color: "black",
+                            // fontWeight: "bold",
+                          },
+                        }}
                         color="secondary"
-                        InputLabelProps={{
-                          style: { color: "white" },
-                        }}
-                        InputProps={{
-                          style: { color: "white" },
-                        }}
+                        // color="secondary"
+                        // InputLabelProps={{
+                        //   style: { color: "white" },
+                        // }}
+                        // InputProps={{
+                        //   style: { color: "white" },
+                        // }}
                         name="message"
                       />
                     </Grid>

@@ -76,6 +76,7 @@ const backgrounds = [
   "linear-gradient(45deg, #4b0082, #0e4b83, #0e4b83, #4b0082)", // Indigo shades
   "linear-gradient(45deg, #ff5733, #ffcc00, #ffcc00, #ff5733)", // Orange shades
   "linear-gradient(45deg, #ff5733, #b22222, #b22222, #ff5733)", // Red shades
+  // "linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%)"
 ];
 
 const ToggleButton = styled(Button)`

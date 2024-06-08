@@ -7,20 +7,20 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: ${({ scrolled, isNavCollapsed }) =>
-    scrolled || isNavCollapsed ? "transparent" : "transparent"};
+    scrolled || !isNavCollapsed ? "black" : "transparent"};
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
   transition: background-color 0.3s ease;
-
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -47,6 +47,7 @@ const NavLinks = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    background-color: black;
     display: ${({ isNavCollapsed }) => (isNavCollapsed ? "none" : "flex")};
   }
 `;
@@ -62,7 +63,8 @@ const NavLink = styled(HashLink)`
   }
 
   @media only screen and (max-width: 768px) {
-    margin: 3px 0;
+    margin: 10px 0;
+    margin-left: 45%;
   }
 `;
 
@@ -70,9 +72,8 @@ const SocialAndConnect = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
-
   @media only screen and (max-width: 768px) {
-    margin-left: 0;
+    margin-left: 12%;
     margin-top: 10px;
     display: ${({ isNavCollapsed }) => (isNavCollapsed ? "none" : "flex")};
   }
