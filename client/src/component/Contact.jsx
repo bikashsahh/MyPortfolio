@@ -78,7 +78,7 @@ const Contact = () => {
       'j34buDdTVlc6bO_Vl'
     ).then((result) => {
       setIsLoading(false);
-      toast.success("Email sent successfully");
+      toast.success("We Got your mail💙");
       e.target.reset();
     }, (error) => {
       setIsLoading(false);
@@ -96,7 +96,6 @@ const Contact = () => {
 
   return (
     <Section id="contact">
-      <ToastContainer />
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} md={6}>
           <div ref={textRef}>
@@ -159,29 +158,13 @@ const Contact = () => {
                         fullWidth
                         label="Full Name"
                         sx={{
-                          // Root class for the input field
-                          "& .MuiFilledInput-root": {
-                            color: "#000",
-                            fontFamily: "Arial",
-                            // fontWeight: "bold",
-                            backgroundColor: "#f4f4f4",
-                            borderTopLeftRadius: "7px",
-                            borderTopRightRadius: "7px",
-                          },
-                          // Class for the label of the filled input field
-                          "& .MuiInputLabel-filled": {
-                            color: "black",
-                            // fontWeight: "bold",
-                          },
-                        }}
-                        color="secondary"
-                        // InputLabelProps={{
-                        //   style: { color: "white" },
-                        // }}
-                        // InputProps={{
-                        //   style: { color: "white" },
-                        // }}
-                        required
+                          color: "secondary",
+                          fontFamily: "Arial",
+                          backgroundColor: "#f4f4f4",
+                          borderTopLeftRadius: "7px",
+                          borderTopRightRadius: "7px",
+                      }}
+                      color="secondary"
                         name="fullName"
                       />
                     </Grid>
@@ -193,29 +176,13 @@ const Contact = () => {
                         type="email"
                         required
                         sx={{
-                          // Root class for the input field
-                          "& .MuiFilledInput-root": {
-                            color: "#000",
-                            fontFamily: "Arial",
-                            // fontWeight: "bold",
-                            backgroundColor: "#f4f4f4",
-                            borderTopLeftRadius: "7px",
-                            borderTopRightRadius: "7px",
-                          },
-                          // Class for the label of the filled input field
-                          "& .MuiInputLabel-filled": {
-                            color: "black",
-                            // fontWeight: "bold",
-                          },
-                        }}
-                        color="secondary"
-                        // color="secondary"
-                        // InputLabelProps={{
-                        //   style: { color: "white" },
-                        // }}
-                        // InputProps={{
-                        //   style: { color: "white" },
-                        // }}
+                          color: "secondary",
+                          fontFamily: "Arial",
+                          backgroundColor: "#f4f4f4",
+                          borderTopLeftRadius: "7px",
+                          borderTopRightRadius: "7px",
+                      }}
+                      color="secondary"
                         name="email"
                       />
                     </Grid>
@@ -225,29 +192,13 @@ const Contact = () => {
                         fullWidth
                         label="Subject"
                         sx={{
-                          // Root class for the input field
-                          "& .MuiFilledInput-root": {
-                            color: "#000",
+                            color: "secondary",
                             fontFamily: "Arial",
-                            // fontWeight: "bold",
                             backgroundColor: "#f4f4f4",
                             borderTopLeftRadius: "7px",
                             borderTopRightRadius: "7px",
-                          },
-                          // Class for the label of the filled input field
-                          "& .MuiInputLabel-filled": {
-                            color: "black",
-                            // fontWeight: "bold",
-                          },
                         }}
                         color="secondary"
-                        // color="secondary"
-                        // InputLabelProps={{
-                        //   style: { color: "white" },
-                        // }}
-                        // InputProps={{
-                        //   style: { color: "white" },
-                        // }}
                         name="subject"
                       />
                     </Grid>
@@ -260,29 +211,13 @@ const Contact = () => {
                         rows={4}
                         required
                         sx={{
-                          // Root class for the input field
-                          "& .MuiFilledInput-root": {
-                            color: "#000",
-                            fontFamily: "Arial",
-                            // fontWeight: "bold",
-                            backgroundColor: "#f4f4f4",
-                            borderTopLeftRadius: "7px",
-                            borderTopRightRadius: "7px",
-                          },
-                          // Class for the label of the filled input field
-                          "& .MuiInputLabel-filled": {
-                            color: "black",
-                            // fontWeight: "bold",
-                          },
-                        }}
-                        color="secondary"
-                        // color="secondary"
-                        // InputLabelProps={{
-                        //   style: { color: "white" },
-                        // }}
-                        // InputProps={{
-                        //   style: { color: "white" },
-                        // }}
+                          color: "secondary",
+                          fontFamily: "Arial",
+                          backgroundColor: "#f4f4f4",
+                          borderTopLeftRadius: "7px",
+                          borderTopRightRadius: "7px",
+                      }}
+                      color="secondary"
                         name="message"
                       />
                     </Grid>
@@ -326,6 +261,7 @@ const Contact = () => {
         </Grid>
       </Grid>
       <Footer author={"Bikash Sah"} />
+      <ToastContainer />
     </Section>
   );
 };
