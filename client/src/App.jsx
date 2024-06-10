@@ -7,14 +7,11 @@ import { Banner } from "./component/Banner";
 import Projects from "./component/Projects";
 import About from "./component/About";
 import Contact from "./component/Contact";
-import Net from "./component/Net";
 import Education from "./component/Education";
 import Button from "@mui/material/Button";
-import StarIcon from "@mui/icons-material/Star";
 import StarBorderTwoToneIcon from '@mui/icons-material/StarBorderTwoTone';
 import StarSprinkle from "./component/StarSprinkler";
-import zIndex from "@mui/material/styles/zIndex";
-import Birds from "./component/Birds";
+import Birds from "./ui/Birds";
 
 // import { inject } from '@vercel/analytics';
 // import Birds from "./component/Birds";

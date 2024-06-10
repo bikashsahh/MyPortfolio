@@ -5,7 +5,17 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import Introduction from "./Introduction";
-import Square from "./Square";
+import Square from "../ui/Square";
+import Star from "../ui/Star";
+import TorusKnot from "../ui/TorusKnot";
+import Dodecahedron from "../ui/Dodecahedron";
+import Icosahedron from "../ui/Icosahedron";
+import Octahedron from "../ui/Octahedron";
+import Wave from "../ui/Wave";
+import Tetrahedron from "../ui/Tetrahedron";
+import Torus from "../ui/Torus";
+import Sphere from "../ui/Sphere";
+import Capsule from "../ui/Capsule";
 
 const Right = styled.div`
   flex: 1;
@@ -114,6 +124,18 @@ const About = () => {
                 <OrbitControls enableZoom={false} />
                 <ambientLight intensity={1} />
                 <directionalLight position={[4, 1, 1]} />
+                {/* <Star position={[0, 0, 0]} color="#f1c40f" isAnimating={!isMobile} /> */}
+                {/* <TorusKnot position={[0, 0, 0]} color="#da4ea2" isAnimating={!isMobile} /> */}
+                {/* <Dodecahedron position={[0, 0, 0]} color="#da4ea2" isAnimating={!isMobile}/> */}
+                {/* <Icosahedron position={[0, 0, 0]} color="#da4ea2" isAnimating={!isMobile}/> */}
+                {/* <Octahedron position={[0, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Wave position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Tetrahedron position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Torus position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Sphere position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Capsule position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} /> */}
+                {/* <Wave position={[1.5, 0, 0]} color="#da4ea2" isAnimating={!isMobile} /> */}
+                {/* <Wave position={[0, 1, -1]} color="#D0E512" isAnimating={!isMobile} /> */}
                 <Square position={[-1.5, 0, 0]} color="#2596be" isAnimating={!isMobile} />
                 <Square position={[1.5, 0, 0]} color="#da4ea2" isAnimating={!isMobile} />
                 <Square position={[0, 1, -1]} color="#D0E512"  isAnimating={!isMobile}/>
