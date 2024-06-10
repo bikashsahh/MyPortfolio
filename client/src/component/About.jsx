@@ -6,16 +6,16 @@ import { OrbitControls } from "@react-three/drei";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import Introduction from "./Introduction";
 import Square from "../ui/Square";
-import Star from "../ui/Star";
-import TorusKnot from "../ui/TorusKnot";
-import Dodecahedron from "../ui/Dodecahedron";
-import Icosahedron from "../ui/Icosahedron";
-import Octahedron from "../ui/Octahedron";
-import Wave from "../ui/Wave";
-import Tetrahedron from "../ui/Tetrahedron";
-import Torus from "../ui/Torus";
-import Sphere from "../ui/Sphere";
-import Capsule from "../ui/Capsule";
+// import Star from "../ui/Star";
+// import TorusKnot from "../ui/TorusKnot";
+// import Dodecahedron from "../ui/Dodecahedron";
+// import Icosahedron from "../ui/Icosahedron";
+// import Octahedron from "../ui/Octahedron";
+// import Wave from "../ui/Wave";
+// import Tetrahedron from "../ui/Tetrahedron";
+// import Torus from "../ui/Torus";
+// import Sphere from "../ui/Sphere";
+// import Capsule from "../ui/Capsule";
 
 const Right = styled.div`
   flex: 1;
