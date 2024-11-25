@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import cvFile from "../assets/file/cv.pdf";
+import cvFile from "../assets/file/Resume.pdf";
 
 const Introduction = () => {
   const theme = useTheme();
@@ -38,15 +38,15 @@ const Introduction = () => {
       >
         <Box sx={{ mr: 2, mb: isMobile ? 1 : 0, textAlign: isMobile ? "center" : "left" }} className="abouttag">
           <Typography variant="h6" color="text.secondary">
-            Leetcode
+            Leetcode&GFG
           </Typography>
-          <Typography variant="body1">1780+ Rating</Typography>
+          <Typography variant="body1">1800+ Rating</Typography>
         </Box>
         <Box sx={{ mr: 2, mb: isMobile ? 1 : 0, textAlign: isMobile ? "center" : "left" }} className="abouttag">
           <Typography variant="h6" color="text.secondary">
             Solved
           </Typography>
-          <Typography variant="body1">900+problem</Typography>
+          <Typography variant="body1">1000+ Problem</Typography>
         </Box>
         <Box sx={{ mr: isMobile ? 2 : 0, mb: isMobile ? 1 : 0, textAlign: isMobile ? "center" : "left" }} className="abouttag">
           <Typography variant="h6" color="text.secondary">
