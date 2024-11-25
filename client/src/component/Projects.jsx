@@ -8,7 +8,6 @@ import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import projImg1 from "../assets/img/MnnitIgnou.png";
 import projImg2 from "../assets/img/Difi.png";
 import projImg3 from "../assets/img/college.png";
-import projImg4 from "../assets/img/gymfrick.png";
 
 const projectData = [
   {
@@ -29,12 +28,6 @@ const projectData = [
     imageUrl: projImg3,
     url: "https://github.com/bikashsahh/DevjamPGFinal",
   },
-  {
-    title: "Gym Frick",
-    description: "GymFrick is a comprehensive fitness application designed to help users track their workouts, explore different exercises, and learn about various body parts.",
-    imageUrl: projImg4,
-    url: "https://github.com/bikashsahh/Gym-Frick",
-  }
 ];
 
 const Section = styled.div`
